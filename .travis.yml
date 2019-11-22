@@ -11,6 +11,13 @@ script:
   - docker run -v $TRAVIS_BUILD_DIR:/documents/ asciidoctor/docker-asciidoctor asciidoctor -D /documents/output *.adoc    
 
 after_success:      
+  - rm -f Gemfile.lock
+  - bundle config --local github.https true
+  - bundle --path=.bundle/gems --binstubs=.bundle/.bin
+  
+  
+  
+  
   - ls ;
   - cp -b codereview.gif output;
   - cd output ;
