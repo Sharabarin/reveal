@@ -7,7 +7,7 @@
 :lang: ru
 :doctype: article
 :toclevels: 3
-:imagesdir: images
+:imagesdir:
 :source-highlighter: highlightjs
 :highlightjsdir: highlight
 :icons: font
