@@ -9,7 +9,7 @@ before_install:
 
 script:
   - docker run -v $TRAVIS_BUILD_DIR:/documents/ --name asciidoc-to-pdf asciidoctor/docker-asciidoctor asciidoctor-pdf -D /documents/output *.adoc    
-  - docker run -v $TRAVIS_BUILD_DIR:/documents/ --name asciidoc-to-html asciidoctor/docker-asciidoctorasciidoctor-revejs \ -a revejsdir = https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0 *.adoc
+  - docker run -v $TRAVIS_BUILD_DIR:/documents/ --name asciidoc-to-html asciidoctor/docker-asciidoctor asciidoctor-revejs \ -a revejsdir = https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0 *.adoc
 
 after_success:      
   - ls ;
