@@ -20,10 +20,10 @@ after_failure:
   - docker logs asciidoc-to-pdf
 
 after_success:      
-  - cd output ; 
-  - ls ..;
   - ls ;
-  - cp -b codereview.gif ;
+  - cp -b codereview.gif /output;
+  - cd output ;
+  - ls ;
   - git init
   - git config user.name "${GH_USER_NAME}"
   - git config user.email "{GH_USER_EMAIL}"
