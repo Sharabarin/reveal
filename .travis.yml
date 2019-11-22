@@ -21,7 +21,7 @@ after_failure:
 
 after_success:      
   - ls ;
-  - cp -b codereview.gif /output;
+  - cp -b codereview.gif output codereview.gif;
   - cd output ;
   - ls ;
   - git init
